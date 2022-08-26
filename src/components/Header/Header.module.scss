@@ -1,0 +1,22 @@
+.wrapper{
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.inner{
+    width: 1350px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex{
+    display: flex
+}
+
+.logo{
+    width: 2rem;
+    height: 4rem;
+}
