@@ -2,21 +2,148 @@
     border-bottom: 2px solid black;
     display: flex;
     justify-content: center;
+    background-color: #20232a;
+    color: white;
+    padding-left: 0.5rem;
 }
 
 .inner{
     width: 1350px;
-    background-color: aliceblue;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.flex{
-    display: flex
-}
 
 .logo{
-    width: 2rem;
-    height: 4rem;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    img{
+        width: 2rem;
+        height: 4rem;
+    }
+}
+
+.menu{
+    width: 60%;
+    height: 100%;
+
+    ul{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        list-style-type: none;
+        justify-content: right;
+
+        li{
+            align-items: center;
+            padding: 0.5rem 1rem;
+            margin: 0 1rem;
+            border: 2px solid white;
+            border-radius: 6px;
+        }
+        li:hover{
+            background-color: white;
+            a{
+                color: black;
+            }
+        }
+
+        li:last-child{
+            border: 2px solid red;
+            margin-left: 4rem;
+            &:hover{
+                background-color: red;
+                a{
+                    color: black;
+                }
+            }
+            a{
+                color: red;
+            }
+        }
+
+        a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+.icon-menu{
+    display: none;
+}
+.show-menu{
+    display: none;
+    width: 100%;
+    background-color: antiquewhite;
+    animation: example 5s linear;
+    animation-delay: 2s;
+    ul{
+        width: 100%;
+        list-style-type: none;
+        li{
+            width: 100%;
+            padding: 0.6rem 0.8rem;
+            &:hover{
+                background-color: black;
+            }
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+}
+@keyframes example{
+    from { height: 0%;}
+    to {height: 100%;}
+}
+
+@media screen and (max-width: 750px) {
+    .menu>ul>li:last-child{
+        display: none;
+    }
+    .icon-menu{
+        display: inline;
+        padding: 0.5rem 1rem;
+        border: 2px solid white;
+        margin-right: 1rem;
+        .icon{
+            font-size: 1.1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .menu>ul>li:nth-child(3){
+        display: none;
+    }
+    .icon-menu{
+        display: inline;
+        padding: 0.5rem 1rem;
+        border: 2px solid white;
+        margin-right: 1rem;
+        .icon{
+            font-size: 1.1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .menu>ul>li{
+        display: none;
+    }
+    .icon-menu{
+        display: inline;
+        padding: 0.5rem 1rem;
+        border: 2px solid white;
+        margin-right: 1rem;
+        .icon{
+            font-size: 1.1rem;
+        }
+    }
 }
