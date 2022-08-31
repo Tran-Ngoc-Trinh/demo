@@ -1,16 +1,21 @@
 .wrapper{
-    border-bottom: 2px solid black;
+    background-color: #20232a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
-    background-color: #20232a;
     color: white;
     padding-left: 0.5rem;
+    background-color: #20232a;
 }
 
 .inner{
-    width: 1350px;
+    width: var(--default-layout-width);
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 
@@ -20,8 +25,10 @@
     width: 40%;
     height: 100%;
     img{
+        position: relative;
         width: 2rem;
         height: 4rem;
+        animation: logo 5s linear infinite;
     }
 }
 
@@ -78,19 +85,29 @@
     display: none;
 }
 .show-menu{
+    position: relative;
+    // top: 100px;
     display: none;
     width: 100%;
-    background-color: antiquewhite;
-    animation: example 5s linear;
-    animation-delay: 2s;
+    background-color: #20232a;
+    opacity: 0.97;
+    // animation: example 5s linear;
+    // animation-delay: 2s;
     ul{
         width: 100%;
         list-style-type: none;
         li{
             width: 100%;
             padding: 0.6rem 0.8rem;
+            a{
+                color: white;
+            }
             &:hover{
-                background-color: black;
+                background-color: white;
+                a{
+                    color: black;
+                }
+                
             }
         }
     }
@@ -101,6 +118,41 @@
 @keyframes example{
     from { height: 0%;}
     to {height: 100%;}
+}
+
+@keyframes logo{
+    0% { 
+        transform: rotate(0deg);
+        left: 0px;
+        
+    }
+    15%{
+        filter: brightness(250%);
+    }
+    30%{
+        filter: contrast(180%);
+    }
+    45%{
+        filter: grayscale(100%);
+    }
+    60%{
+        filter: hue-rotate(180deg);
+        left: 100px;
+    }
+    75%{
+        filter: invert(100%);
+
+    }
+    90%{
+        filter: saturate(7);
+
+    }
+    100% { 
+        transform: rotate(360deg);
+        filter: sepia(100%);
+        left: 0;
+        // filter: drop-shadow(8px 8px 10px 10px 10px 10px 10px green);
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -145,5 +197,14 @@
         .icon{
             font-size: 1.1rem;
         }
+    }
+}
+
+@media screen and (min-width: 750px){
+    .show-menu{
+        display: none !important;
+    }
+    .menu{
+        display: flex !important;
     }
 }

@@ -1,4 +1,4 @@
-import Home from './../pages/Home/index.js';
+import Home from './../pages/Home/Home';
 
 const publicRoutes = [
     { path: '/', component: Home}

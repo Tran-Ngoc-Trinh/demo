@@ -29,10 +29,12 @@ function Header(){
         if (ref.current){
             document.getElementById('show-menu').style.display = 'none';
             ref.current = false;
+            document.getElementById('menu').style.display = 'block' ;
         }
         else{
             document.getElementById('show-menu').style.display = 'block';
             ref.current = true;
+            document.getElementById('menu').style.display = 'none';
         }
     }
 
@@ -41,10 +43,9 @@ function Header(){
             <header className={cx('wrapper')}>
                 <div className={cx('inner')}>
                     <div className={cx('logo')}>
-                        <img src={logo} alt="logo" className={cx('logo')}></img>
-                        <h3>TheThem</h3>
+                        <img src={logo} alt="logo"></img>
                     </div>
-                    <div className={cx('menu')}>
+                    <div className={cx('menu')} id='menu'>
                         <ul>
                            {li}
                         </ul>
