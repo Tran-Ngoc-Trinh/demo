@@ -10,6 +10,7 @@
     padding-left: 0.5rem;
     background-color: #20232a;
     height: 60px;
+    z-index: 999;
 }
 
 .inner{
@@ -77,6 +78,7 @@
             align-items: center;
             text-decoration: none;
             color: white;
+            font-weight: bold;
         }
     }
 }
@@ -99,6 +101,7 @@
             padding: 0.6rem 0.8rem;
             a{
                 color: white;
+                font-weight: bold;
             }
             &:hover{
                 background-color: white;

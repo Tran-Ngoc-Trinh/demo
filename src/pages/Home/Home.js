@@ -30,7 +30,7 @@ function Home(){
 
     const slide = slide_image.map((slide, index) => {
         return <div key={index}>
-            <img src={slide.image}></img>
+            <img src={slide.image} alt="slide"></img>
             <p>{slide.content}</p>
         </div>  
     })
@@ -41,7 +41,7 @@ function Home(){
                 <div className={cx('home')}>
                     <div className={cx('home__content')}>
                         <div>
-                            <label>WELCOME TO MY SITE</label>
+                            <label>Trần Ngọc Trinh</label>
                         </div>
                         <div>
                             <br/>
@@ -78,7 +78,9 @@ function Home(){
 
             <div className={cx('inner_project')}>
                 <div className={cx('project')}>
-                    <label>Project</label>
+                    <div>
+                        <label>Project</label>
+                    </div>
                     
                 </div>
             </div>
