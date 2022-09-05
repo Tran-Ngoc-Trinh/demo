@@ -9,6 +9,7 @@
     color: white;
     padding-left: 0.5rem;
     background-color: #20232a;
+    height: 60px;
 }
 
 .inner{
@@ -28,7 +29,6 @@
         position: relative;
         width: 2rem;
         height: 4rem;
-        animation: logo 5s linear infinite;
     }
 }
 
@@ -85,14 +85,12 @@
     display: none;
 }
 .show-menu{
-    position: relative;
-    // top: 100px;
+    position: fixed;
+    top: 60px;
     display: none;
     width: 100%;
     background-color: #20232a;
-    opacity: 0.97;
-    // animation: example 5s linear;
-    // animation-delay: 2s;
+    opacity: 0.9;
     ul{
         width: 100%;
         list-style-type: none;
@@ -115,45 +113,8 @@
         text-decoration: none;
     }
 }
-@keyframes example{
-    from { height: 0%;}
-    to {height: 100%;}
-}
 
-@keyframes logo{
-    0% { 
-        transform: rotate(0deg);
-        left: 0px;
-        
-    }
-    15%{
-        filter: brightness(250%);
-    }
-    30%{
-        filter: contrast(180%);
-    }
-    45%{
-        filter: grayscale(100%);
-    }
-    60%{
-        filter: hue-rotate(180deg);
-        left: 100px;
-    }
-    75%{
-        filter: invert(100%);
 
-    }
-    90%{
-        filter: saturate(7);
-
-    }
-    100% { 
-        transform: rotate(360deg);
-        filter: sepia(100%);
-        left: 0;
-        // filter: drop-shadow(8px 8px 10px 10px 10px 10px 10px green);
-    }
-}
 
 @media screen and (max-width: 750px) {
     .menu>ul>li:last-child{
