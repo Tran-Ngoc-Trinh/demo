@@ -108,21 +108,42 @@ function Home(){
             <div className={cx('inner_project')}>
                 <div className={cx('project')}>
                     <div>
+                        <label>Project</label>
+                    </div>
+                    <div>
+                        {/* <div>
+                            <img alt="card" src={image_card}></img>
+                            <img alt="card" src={image_card}></img>
+                        </div>
+                        <div >
+                            <img alt="card" src={image_card}></img>
+                            <img alt="card" src={image_card}></img>
+                        </div> */}
                         <div>
-                            <label>Project</label>
+                            <img alt="card" src={image_card}></img>
+                            <div className={cx("hover_card")}>
+                                <p className={cx("hover_card_text")}>deplay</p>
+                            </div>
+                        </div>
+                        <div >
+                            <img alt="card" src={image_card}></img>
+                            <div className={cx("hover_card")}>
+                                <p className={cx("hover_card_text")}>deplay</p>
+                            </div>
                         </div>
                         <div>
-                            <div>
-                                <img alt="card" src={image_card}></img>
-                                <img alt="card" src={image_card}></img>
+                            <img alt="card" src={image_card}></img>
+                            <div className={cx("hover_card")}>
+                                <p className={cx("hover_card_text")}>deplay</p>
                             </div>
-                            <div >
-                                <img alt="card" src={image_card}></img>
-                                <img alt="card" src={image_card}></img>
+                        </div>
+                        <div >
+                            <img alt="card" src={image_card}></img>
+                            <div className={cx("hover_card")}>
+                                <p className={cx("hover_card_text")}>deplay</p>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
