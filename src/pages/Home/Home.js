@@ -4,7 +4,10 @@ import meter1 from "./../../assets/images/meter1.svg";
 import meter2 from "./../../assets/images/meter2.svg";
 import meter3 from "./../../assets/images/meter3.svg";
 import image_amongus from './../../assets/images/amongus_233_300.png';
-import image_card from './../../assets/images/maxresdefault.jpg'
+import image_card_selenium from './../../assets/images/maxresdefault.jpg'
+import image_card_nlp from './../../assets/images/nlp.jpg'
+import image_card_yolo from './../../assets/images/yolo.png'
+import image_card_cnn from './../../assets/images/cnn.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faYoutube, faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -108,39 +111,31 @@ function Home(){
             <div className={cx('inner_project')}>
                 <div className={cx('project')}>
                     <div>
-                        <label>Project</label>
+                        <h2>Projects</h2>
                     </div>
                     <div>
-                        {/* <div>
-                            <img alt="card" src={image_card}></img>
-                            <img alt="card" src={image_card}></img>
-                        </div>
-                        <div >
-                            <img alt="card" src={image_card}></img>
-                            <img alt="card" src={image_card}></img>
-                        </div> */}
                         <div>
-                            <img alt="card" src={image_card}></img>
+                            <img alt="card" src={image_card_yolo}></img>
                             <div className={cx("hover_card")}>
-                                <p className={cx("hover_card_text")}>deplay</p>
+                                <p className={cx("hover_card_text")}>Traffic Sign Recognition</p>
                             </div>
                         </div>
                         <div >
-                            <img alt="card" src={image_card}></img>
+                            <img alt="card" src={image_card_nlp}></img>
                             <div className={cx("hover_card")}>
-                                <p className={cx("hover_card_text")}>deplay</p>
+                                <p className={cx("hover_card_text")}>Restaurant reviews on Foody</p>
                             </div>
                         </div>
                         <div>
-                            <img alt="card" src={image_card}></img>
+                            <img alt="card" src={image_card_cnn}></img>
                             <div className={cx("hover_card")}>
-                                <p className={cx("hover_card_text")}>deplay</p>
+                                <p className={cx("hover_card_text")}>Image Classification</p>
                             </div>
                         </div>
                         <div >
-                            <img alt="card" src={image_card}></img>
+                            <img alt="card" src={image_card_selenium}></img>
                             <div className={cx("hover_card")}>
-                                <p className={cx("hover_card_text")}>deplay</p>
+                                <p className={cx("hover_card_text")}>Craping data from website</p>
                             </div>
                         </div>
                     </div>

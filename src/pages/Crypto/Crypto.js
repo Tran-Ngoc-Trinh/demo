@@ -13,7 +13,6 @@ function Crypto() {
     return ( 
         <div className={cx('wrapper')}>
             <div className={cx('sidebar')}>
-                a
             </div>
             <div className={cx('section')}>
                 <div className={cx('card')}>
@@ -25,20 +24,21 @@ function Crypto() {
                         <div className={cx('card_title_price')}>
                             {/* $10k */}
                         </div>
+                        
                     </div>
                     <Plot 
                         data={[
                             {
+                                name: 'bitcoins',
                                 y: x,
                                 x: y,
                                 type: 'scatter',
                                 mode: 'lines',
-                                fill: 'toself',
-                                fillcolor: 'lightred',
-                                hoveron: 'points+fills',
-                                text: "Points + Fills",
-                                hoverinfo: 'text',
+                                fill: 'tozeroy', //tozeroy toself tonexty
+                                // fillcolor: 'lightred',
                                 marker: {color: 'red'},
+                                hovertemplate: '<i>Price</i>: $%{y:.2f}' +
+                                '<br><b>Date</b>: %{x}<br>',
                             },
                         ]}
                         style={{ width: '100%', height: '100%' }}
@@ -46,13 +46,18 @@ function Crypto() {
                             {   
                                 autosize: true,
                                 title:{
-                                    text: "BTC/USDT                          &10k",
+                                    // text: "BTC/USDT                          $10k",
                                     font: {
-                                        family: 'Courier New, monospace',
-                                        size: 24
+                                        family: 'Red Hat Text, monospsans-seriface',
+                                        size: 30
                                     },
                                 },
+                                title:'<b>BTC/USDT</b> <br>',
                                 xaxis:{
+                                    type: 'date',
+                                    // range: [
+                                    //     y[0],y[4]
+                                    // ],
                                     title:{
                                         text: 'Date',
                                         font: {
@@ -63,6 +68,9 @@ function Crypto() {
                                     showgrid: false
                                 },
                                 yaxis:{
+                                    range: [
+                                        130, 190
+                                    ],
                                     title:{
                                         text: "Price($)",
                                         font: {
@@ -88,6 +96,7 @@ function Crypto() {
                             }
                         }
                         
+                        
                     ></Plot>
                 </div>
             </div>
@@ -101,3 +110,5 @@ export default Crypto;
 // https://www.coinbase.com/price/javascript-token
 // https://codepen.io/diggitydoge/pen/dyyWqGO
 // https://www.npmjs.com/package/react-crypto-chart
+// http://juliaplots.org/PlotlyJS.jl/stable/examples/line_scatter/
+// https://plotly.com/javascript/filled-area-animation/
