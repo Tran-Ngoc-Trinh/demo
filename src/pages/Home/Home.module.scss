@@ -4,68 +4,30 @@
 }
 
 .inner_home{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: calc(100vh + 70px);
+    background-image: url('./../../assets/images/429865.jpg');
+    background-size: cover;
 }
 
-.home{
+.home_row_1{
+    position: absolute;
+    .img{
+
+    }
+
+}
+
+.home_row_2{
     width: var(--default-layout-width);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.home__content{
-    width: 60%;
-    margin-left: 0.5rem;
-    >div{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 40px 0;
-        >label{
-            font-size: 30px;
-            border: 1px solid black;
-            padding: 15px 25px;
-            border-radius: 10px;
-            color: white;
-            font-weight: bold;
-            background: linear-gradient(rgb(90, 3, 61),rgb(104, 4, 17),rgba(6, 69, 121, 0));
-        }
-        >p{
-            color: rgba(245, 245, 245, 0.6);
-            font-size: var(--default-font-size-p);
-        }
-    }
-    div:nth-child(3){
-        display: flex;
-        justify-content: center;
-        .icons{
-            padding: 10px 20px;
-            margin: 0 15px;
-            font-size: 1.5rem;
-            border: 1px solid brown;
-            border-radius: 20px;
-            color: brown
-        }
-        .icons:hover{
-            color: black;
-            background-color: brown;
-            opacity: 0.8;
-        }
-    }
-}
-.home__image{
-    display: flex;
-    justify-content: center;
-    width: 40%;
-    img{
-        max-width:60%;
-        max-height:100%;
-    }
-}
 
 .inner_skill{
     position: relative;

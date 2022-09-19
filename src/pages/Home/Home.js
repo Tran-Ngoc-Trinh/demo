@@ -3,17 +3,17 @@ import style from './Home.module.scss';
 import meter1 from "./../../assets/images/meter1.svg";
 import meter2 from "./../../assets/images/meter2.svg";
 import meter3 from "./../../assets/images/meter3.svg";
-import image_amongus from './../../assets/images/amongus_233_300.png';
 import image_card_selenium from './../../assets/images/maxresdefault.jpg'
 import image_card_nlp from './../../assets/images/nlp.jpg'
 import image_card_yolo from './../../assets/images/yolo.png'
 import image_card_cnn from './../../assets/images/cnn.png'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram, faYoutube, faGithub } from "@fortawesome/free-brands-svg-icons";
+import bird from './../../assets/images/giphy.gif'
+
 
 const cx = classNames.bind(style)
 
 function Home(){
+
     const slide_image = [{
             'image': meter1,
             'content': "Reactjs"
@@ -70,29 +70,10 @@ function Home(){
         <div className={cx('wrapper')}>
             <div className={cx('inner_home')}>
                 <div className={cx('home')}>
-                    <div className={cx('home__content')}>
-                        <div>
-                            <label>Trần Ngọc Trinh</label>
-                        </div>
-                        <div>
-                            <br/>
-                            <p>The page will reload when you make changes.
-                            You may also see any lint errors in the console. The page will reload when you make changes.
-                            You may also see any lint errors in the console. The page will reload when you make changes.
-                            You may also see any lint errors in the console. The page will reload when you make changes.
-                            You may also see any lint errors in the console.
-                            </p>
-                            <br/>
-                        </div>
-                        <div>
-                            <FontAwesomeIcon icon={faFacebook} className={cx('icons')}/>
-                            <FontAwesomeIcon icon={faInstagram} className={cx('icons')}/>
-                            <FontAwesomeIcon icon={faYoutube} className={cx('icons')}/>
-                            <FontAwesomeIcon icon={faGithub} className={cx('icons')}/>
-                        </div>
+                    <div className={cx('home_row_1')}>
+                        <img src={bird} alt="bird"></img>
                     </div>
-                    <div className={cx('home__image')}>
-                        <img src={image_amongus} alt="Among us"></img>
+                    <div className={cx('home_row_2')}>
                     </div>
                 </div>
             </div>
