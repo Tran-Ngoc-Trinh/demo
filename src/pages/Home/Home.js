@@ -14,6 +14,21 @@ const cx = classNames.bind(style)
 
 function Home(){
 
+    const list_background = ['https://wallpaperaccess.com/full/1223823.jpg', 
+        'https://wallpaperaccess.com/full/4460881.jpg',
+        'https://wallpaperaccess.com/full/5014467.jpg',
+        'https://wallpaperaccess.com/full/3827724.jpg',
+        'https://wallpaperaccess.com/full/5014469.jpg'
+    ]
+    let count = 0
+    setInterval(() => {
+        if (count == 5)
+            count = 0
+        let pointer =  "url(" + list_background[count].toString() + ")";
+        document.getElementById('home_background').style.backgroundImage = pointer;
+        count += 1
+    }, 3000);
+
     const slide_image = [{
             'image': meter1,
             'content': "Reactjs"
@@ -68,7 +83,7 @@ function Home(){
     
     return (
         <div className={cx('wrapper')}>
-            <div className={cx('inner_home')}>
+            <div className={cx('inner_home')} id="home_background">
                 <div className={cx('home')}>
                     <div className={cx('home_row_1')}>
                         <img src={bird} alt="bird"></img>

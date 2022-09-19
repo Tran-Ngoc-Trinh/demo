@@ -15,10 +15,21 @@
 
 .home_row_1{
     position: absolute;
-    .img{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    animation: move 3s linear;
+    animation-iteration-count: infinite;
+}
 
-    }
-
+@keyframes move{
+    0% {left: 0vw;}
+    // 25% {left: 20vw;}
+    // 40% {left: 50vw;}
+    // 50% {left: 50vw;}
+    // 60% {left: 50vw;}
+    // 75% {left: 70vw;}
+    100% {left: 85vw;}
 }
 
 .home_row_2{
